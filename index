@@ -1,0 +1,577 @@
+:Yemen Nexus Conference Platform:Index.html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤتمر يمن نيكسوس التقني 2026 | Yemen Nexus HR</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Tajawal', 'sans-serif'] },
+                    colors: { 
+                        yemenRed: '#D60A17', 
+                        yemenDark: '#030305', 
+                        yemenGrey: '#0d0d11',
+                        yemenGold: '#FFB800'
+                    },
+                    boxShadow: { 
+                        'neon-red': '0 0 20px rgba(214, 10, 23, 0.5)', 
+                        'neon-white': '0 0 15px rgba(255, 255, 255, 0.05)' 
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #030305; }
+        ::-webkit-scrollbar-thumb { background: #D60A17; border-radius: 2px; }
+        
+        .glass-card { 
+            background: rgba(13, 13, 17, 0.65); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.04); 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .flag-border-focus { animation: flag-glow 5s infinite ease-in-out; }
+        @keyframes flag-glow { 
+            0%, 100% { border-color: #D60A17; box-shadow: 0 0 20px rgba(214, 10, 23, 0.4); } 
+            50% { border-color: #FFFFFF; box-shadow: 0 0 15px rgba(255, 255, 255, 0.15); } 
+        }
+
+        /* 🌌 محرك الجزيئات والكرات المكثف لأسفل من أعلى الشاشة بريتم سريع وجميل */
+        .tech-bg {
+            position: fixed; inset: 0; pointer-events: none; z-index: 0; background-color: #030305;
+        }
+        .particle {
+            position: absolute; background: linear-gradient(to bottom, rgba(214, 10, 23, 0.35), rgba(214, 10, 23, 0.05)); border-radius: 50%;
+            animation: fallLines 4.5s infinite linear; box-shadow: 0 0 12px rgba(214, 10, 23, 0.5);
+        }
+        @keyframes fallLines {
+            0% { transform: translateY(-12vh) scale(0.4); opacity: 0; }
+            15% { opacity: 0.85; }
+            85% { opacity: 0.6; }
+            100% { transform: translateY(108vh) scale(1.3); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-yemenDark text-slate-200 font-sans overflow-x-hidden text-xs sm:text-sm">
+
+    <div class="tech-bg">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808003_1px,transparent_1px),linear-gradient(to_bottom,#80808003_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+        <div class="absolute top-[-20%] right-[-10%] w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] rounded-full bg-yemenRed/10 blur-[120px]"></div>
+        
+        <div class="particle w-2 h-2 left-[4%]" style="animation-delay: 0s; animation-duration: 4s;"></div>
+        <div class="particle w-3.5 h-3.5 left-[14%]" style="animation-delay: 1.5s; animation-duration: 5.5s;"></div>
+        <div class="particle w-1.5 h-1.5 left-[25%]" style="animation-delay: 0.5s; animation-duration: 3.5s;"></div>
+        <div class="particle w-2.5 h-2.5 left-[38%]" style="animation-delay: 2s; animation-duration: 5s;"></div>
+        <div class="particle w-4 h-4 left-[52%]" style="animation-delay: 1s; animation-duration: 6s;"></div>
+        <div class="particle w-2 h-2 left-[67%]" style="animation-delay: 2.8s; animation-duration: 4.2s;"></div>
+        <div class="particle w-3 h-3 left-[80%]" style="animation-delay: 1.2s; animation-duration: 5.2s;"></div>
+        <div class="particle w-1.5 h-1.5 left-[92%]" style="animation-delay: 3.2s; animation-duration: 3.8s;"></div>
+    </div>
+
+    <div id="toast" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 transform translate-y-[-100px] opacity-0 transition-all duration-400 w-[88%] max-w-xs">
+        <div class="bg-yemenGrey border-r-4 border-yemenRed p-3 rounded-xl shadow-xl flex items-center gap-2.5 glass-card">
+            <span id="toast-icon" class="text-base"></span>
+            <p class="text-[11px] font-bold text-slate-100" id="toast-msg"></p>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 w-full px-3 py-2.5 sm:py-3">
+        <nav class="max-w-4xl mx-auto glass-card rounded-xl px-4 py-2 flex items-center justify-between shadow-xl border border-white/5">
+            <div class="flex items-center gap-2">
+                <div class="flex flex-col gap-0.5 justify-center items-center w-6 h-6 rounded bg-black border border-white/10 overflow-hidden shrink-0 shadow">
+                    <div class="w-full h-1/3 bg-yemenRed"></div>
+                    <div class="w-full h-1/3 bg-white"></div>
+                    <div class="w-full h-1/3 bg-black"></div>
+                </div>
+                <div>
+                    <span class="text-sm font-black tracking-wide text-white block">YEMEN <span class="text-yemenRed">NEXUS</span></span>
+                    <span class="text-[7px] text-slate-400 block -mt-1 font-bold uppercase tracking-wider">HR Ecosystem</span>
+                </div>
+            </div>
+            <div>
+                <a href="#register" class="bg-gradient-to-r from-yemenRed to-rose-700 hover:from-rose-600 hover:to-yemenRed text-white text-[10px] font-black px-3 py-2 rounded-lg transition-all shadow-md active:scale-95 flex items-center gap-1">
+                    <span>احجز VIP</span> <i class="fas fa-ticket-alt text-[9px]"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="relative z-10 max-w-4xl mx-auto px-4 py-4 space-y-12 sm:space-y-16">
+        
+        <section id="hero" class="grid lg:grid-cols-12 gap-6 items-center text-right pt-2">
+            <div class="lg:col-span-8 space-y-4">
+                <div class="inline-flex items-center gap-1.5 bg-yemenRed/10 border border-yemenRed/20 px-3 py-1 rounded-full text-[10px] font-bold text-yemenRed">
+                    <span class="w-1.5 h-1.5 rounded-full bg-yemenRed animate-ping"></span>
+                    <span>دعوة رسمية لإطلاق منصة عام 2026</span>
+                </div>
+
+                <div class="space-y-2">
+                    <h1 class="text-2xl sm:text-4xl font-black leading-tight text-white tracking-tight">نبتكر لترسم <span class="text-transparent bg-clip-text bg-gradient-to-l from-yemenRed to-rose-500">المستقبل الرقمي</span></h1>
+                    <p class="text-xs sm:text-sm font-medium text-slate-300">نحو بيئة عمل ذكية، مترابطة، وعالمية المعايير والسيادة الرقمية.</p>
+                    <p class="text-slate-400 text-[11px] leading-relaxed max-w-xl font-normal">
+                        يسر شركة <span class="text-white font-bold">يمن نيكسوس</span> دعوتكم لحضور حفل التدشين السنوي الخاص بإطلاق المنصة السحابية المتكاملة لإدارة الموارد البشرية <span class="text-yemenRed font-bold">Yemen Nexus HR</span> الشريك التقني الأقوى للأعمال المستدامة.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 pt-2 max-w-md">
+                    <div class="p-2.5 bg-gradient-to-br from-yemenRed/10 via-transparent to-transparent border border-yemenRed/20 rounded-xl text-center shadow">
+                        <span class="block text-sm sm:text-base font-black text-emerald-400 font-mono" id="live-seats-counter">
+                            <i class="fas fa-spinner animate-spin text-[10px] text-white"></i>
+                        </span>
+                        <span class="text-[9px] font-bold text-slate-300 block mt-0.5">مقعد عام متاح حالياً</span>
+                    </div>
+                    <div class="p-2.5 bg-yemenGrey/40 border border-white/5 rounded-xl text-center flex flex-col justify-center items-center">
+                        <span class="block text-xs font-black text-white font-mono uppercase">SaaS Core</span>
+                        <span class="text-[9px] text-slate-400 font-bold mt-0.5">مشفرة ومستقرة بالكامل</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4 flex justify-center items-center relative py-2">
+                <div class="relative w-44 sm:w-56 aspect-square rounded-full flex items-center justify-center">
+                    <div class="absolute inset-0 rounded-full border border-dashed border-yemenRed/20 animate-spin" style="animation-duration: 40s;"></div>
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-slate-950 border-2 flag-border-focus relative overflow-hidden shadow-xl flex flex-col justify-center items-center text-center p-4">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent z-10"></div>
+                        <div class="z-20 space-y-1">
+                            <span class="text-xl animate-bounce" style="animation-duration: 4s;">👥</span>
+                            <h3 class="text-white font-black text-[10px] sm:text-xs">Yemen Nexus HR</h3>
+                            <span class="inline-block bg-yemenRed/20 text-white text-[8px] px-2 py-0.5 rounded border border-yemenRed/30 font-black">مؤتمر 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision-mission" class="space-y-6">
+            <div class="text-center max-w-xl mx-auto space-y-1">
+                <span class="text-[9px] font-black tracking-wider text-yemenRed uppercase bg-yemenRed/10 px-2.5 py-1 rounded-full">الهوية الاستراتيجية للمنظومة</span>
+                <h2 class="text-lg sm:text-xl font-black text-white">رؤية وطنية شاملة بطموح قيادي</h2>
+                <div class="w-10 h-0.5 bg-yemenRed mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-3.5">
+                <div class="glass-card p-4 rounded-xl relative overflow-hidden group shadow-md">
+                    <div class="absolute top-0 right-0 w-1 h-full bg-yemenRed"></div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-yemenRed/10 border border-yemenRed/20 flex items-center justify-center text-yemenRed text-xs shrink-0"><i class="far fa-eye"></i></div>
+                        <div class="space-y-1">
+                            <h3 class="text-xs font-black text-white">رؤيتنا المستدامة</h3>
+                            <p class="text-slate-400 text-[11px] leading-relaxed font-normal">أن نكون الشريك التقني الأول للتحول الرقمي في اليمن، عبر إرساء تطبيقات سحابية تجعل من إدارة الموارد البشرية تجربة ذكية وعالية الكفاءة.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-4 rounded-xl relative overflow-hidden group shadow-md">
+                    <div class="absolute top-0 right-0 w-1 h-full bg-slate-400"></div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center text-white text-xs shrink-0"><i class="fas fa-rocket"></i></div>
+                        <div class="space-y-1">
+                            <h3 class="text-xs font-black text-white">رسالتنا التقنية</h3>
+                            <p class="text-slate-400 text-[11px] leading-relaxed font-normal">تمكين الشركات وتزويدها بأنظمة تكنولوجية تضاهي المعايير العالمية بدعم وتنفيذ محلي دقيق، بما يضمن سيادة وحماية الخصوصية الرقمية للبيانات للجهة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 pt-1">
+                <div class="glass-card p-3 rounded-xl text-center"><span class="text-sm text-yemenRed block mb-1"><i class="fas fa-cubes"></i></span><h4 class="text-[11px] font-bold text-white mb-0.5">منظومة Ecosystem</h4></div>
+                <div class="glass-card p-3 rounded-xl text-center"><span class="text-sm text-yemenRed block mb-1"><i class="fas fa-users-cog"></i></span><h4 class="text-[11px] font-bold text-white mb-0.5">توطين الكفاءات</h4></div>
+                <div class="glass-card p-3 rounded-xl text-center"><span class="text-sm text-yemenRed block mb-1"><i class="fas fa-magic"></i></span><h4 class="text-[11px] font-bold text-white mb-0.5">سهولة الاستخدام</h4></div>
+                <div class="glass-card p-3 rounded-xl text-center"><span class="text-sm text-yemenRed block mb-1"><i class="fas fa-shield-alt"></i></span><h4 class="text-[11px] font-bold text-white mb-0.5">سيادة رقمية</h4></div>
+            </div>
+        </section>
+
+        <section id="agenda" class="space-y-4">
+            <div class="text-center max-w-xl mx-auto space-y-1">
+                <span class="text-[9px] font-black tracking-wider text-yemenRed uppercase bg-yemenRed/10 px-2.5 py-1 rounded-full">الجدول اللوجستي لأحداث المؤتمر 2026</span>
+                <h2 class="text-lg sm:text-xl font-black text-white">أجندة ومحاور المؤتمر التقني</h2>
+                <div class="w-10 h-0.5 bg-yemenRed mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-4 gap-1.5 bg-slate-900/60 p-1 rounded-xl border border-white/5 max-w-md mx-auto">
+                <button onclick="showAgendaTab(1)" id="btn-tab-1" class="py-2 text-[10px] font-black rounded-lg transition-all duration-300 bg-yemenRed text-white shadow-neon-red">المحور 1</button>
+                <button onclick="showAgendaTab(2)" id="btn-tab-2" class="py-2 text-[10px] font-black rounded-lg transition-all duration-300 text-slate-400 hover:text-white">المحور 2</button>
+                <button onclick="showAgendaTab(3)" id="btn-tab-3" class="py-2 text-[10px] font-black rounded-lg transition-all duration-300 text-slate-400 hover:text-white">المحور 3</button>
+                <button onclick="showAgendaTab(4)" id="btn-tab-4" class="py-2 text-[10px] font-black rounded-lg transition-all duration-300 text-slate-400 hover:text-white">الختام</button>
+            </div>
+
+            <div class="max-w-md mx-auto pt-1">
+                <div id="content-tab-1" class="glass-card p-4 rounded-xl border border-white/15 space-y-2 block">
+                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                        <span class="text-yemenRed font-black text-[10px] bg-yemenRed/10 px-2 py-0.5 rounded-md"><i class="far fa-clock"></i> 09:00 ص - 10:30 ص</span>
+                        <span class="text-slate-500 text-[9px] font-bold">الاستقبال والتسجيل</span>
+                    </div>
+                    <h3 class="text-xs sm:text-sm font-black text-white">استقبل الوفود، الرواد، وصناع القرار</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed font-normal">بدء الفحص البوابي المباشر للتذاكر الإلكترونية الذكية وتوزيع البروشورات التعريفية الفاخرة لمنظومة اليمن نيكسوس السحابية.</p>
+                </div>
+
+                <div id="content-tab-2" class="glass-card p-4 rounded-xl border border-white/15 space-y-2 hidden">
+                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                        <span class="text-yemenRed font-black text-[10px] bg-yemenRed/10 px-2 py-0.5 rounded-md"><i class="far fa-clock"></i> 10:30 ص - 12:00 م</span>
+                        <span class="text-yemenRed font-black text-[9px] bg-yemenRed/10 px-2 py-0.5 rounded-md font-bold">الافتتاح والتدشين</span>
+                    </div>
+                    <h3 class="text-xs sm:text-sm font-black text-white">حفل الافتتاح وعروض النظام والمزايا الحية الحتمية</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed font-normal">عرض مرئي يجسد فلسفة التحول، يليه الكلمات الافتتاحية وتقديم استعراض حي ومباشر لكامل لوحات التحكم والمزايا في المنصة أمام الجمهور.</p>
+                </div>
+
+                <div id="content-tab-3" class="glass-card p-4 rounded-xl border border-white/15 space-y-2 hidden">
+                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                        <span class="text-yemenRed font-black text-[10px] bg-yemenRed/10 px-2 py-0.5 rounded-md"><i class="far fa-clock"></i> 12:00 م - 12:30 م</span>
+                        <span class="text-slate-500 text-[9px] font-bold">الجلسة الاستراتيجية</span>
+                    </div>
+                    <h3 class="text-xs sm:text-sm font-black text-white">حلقة نقاشية مع قادة ومدراء الاستشارات والموارد البشرية</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed font-normal">جلسة حوارية متميزة تسلط الضوء على تحديات الرقمنة الإدارية المحتوية للسيادة والخصوصية في السوق اليمني بمشاركة الرواد والمستشارين.</p>
+                </div>
+
+                <div id="content-tab-4" class="glass-card p-4 rounded-xl border border-white/15 space-y-2 hidden">
+                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                        <span class="text-yemenRed font-black text-[10px] bg-yemenRed/10 px-2 py-0.5 rounded-md"><i class="far fa-clock"></i> 12:30 م - 01:00 م</span>
+                        <span class="text-slate-500 text-[9px] font-bold">المراسم الختامية</span>
+                    </div>
+                    <h3 class="text-xs sm:text-sm font-black text-white">توقيع مذكرات الشراكة وإتاحة العروض الختامية</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed font-normal">كلمة الشركاء والمستثمرين، توزيع الدروع والشهادات التقديرية، وإعلان إطلاق خصومات التدشين الحصرية لجميع وفود وحاضري المؤتمر.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="register" class="bg-gradient-to-tr from-yemenDark via-[#0b0b0f] to-yemenDark border border-white/5 rounded-2xl p-4 sm:p-6 relative overflow-hidden shadow-xl">
+            <div class="grid lg:grid-cols-12 gap-6 items-center relative z-10">
+                <div class="lg:col-span-5 space-y-2 text-right">
+                    <span class="text-[9px] font-black tracking-wider text-yemenRed bg-yemenRed/10 px-2.5 py-1 rounded-full uppercase">احجز مقعدك الفوري</span>
+                    <h2 class="text-xl sm:text-2xl font-black text-white leading-tight">حجز التذاكر وإصدار بطاقة باج الدخول الذكية</h2>
+                    <p class="text-slate-400 text-[11px] leading-relaxed font-normal">يرجى رفع صورة شخصية واضحة؛ حيث سيقوم السيرفر بدمجها فوراً داخل كرت البادج الرسمي لدخول البوابات بنجاح.</p>
+                </div>
+
+                <div class="lg:col-span-7 w-full">
+                    <div class="glass-card p-4 sm:p-5 rounded-xl border border-white/10 space-y-4 shadow-xl" id="input-ticket-form">
+                        <form id="nexusRegisterForm" onsubmit="submitNexusRegistration(event)" class="space-y-3.5 text-[11px] sm:text-xs text-right">
+                            <div>
+                                <label class="block text-slate-400 mb-1 font-bold">الاسم الكريم الثلاثي بالكامل *</label>
+                                <input type="text" id="reg-name" required placeholder="مثال: أمجد محمد الشيباني" class="w-full bg-slate-950 border border-white/15 focus:border-yemenRed rounded-lg px-3 py-2 text-white outline-none font-medium text-xs">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-slate-400 mb-1 font-bold">الجهة / الشركة *</label>
+                                    <input type="text" id="reg-company" required placeholder="مثال: يمن نيكسوس" class="w-full bg-slate-950 border border-white/15 focus:border-yemenRed rounded-lg px-3 py-2 text-white outline-none font-medium text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-slate-400 mb-1 font-bold">المسمى الوظيفي الحالي *</label>
+                                    <input type="text" id="reg-job" required placeholder="مثال: مدير الموارد البشرية" class="w-full bg-slate-950 border border-white/15 focus:border-yemenRed rounded-lg px-3 py-2 text-white outline-none font-medium text-xs">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-slate-400 mb-1 font-bold">البريد الإلكتروني الرسمي *</label>
+                                    <input type="email" id="reg-email" required placeholder="yourname@company.com" class="w-full bg-slate-950 border border-white/15 focus:border-yemenRed rounded-lg px-3 py-2 text-white outline-none font-mono font-medium text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-slate-400 mb-1 font-bold">رقم الهاتف الجوال *</label>
+                                    <input type="tel" id="reg-phone" required placeholder="مثال: 77XXXXXXX" class="w-full bg-slate-950 border border-white/15 focus:border-yemenRed rounded-lg px-3 py-2 text-white outline-none font-mono font-medium text-xs">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-slate-400 mb-1 font-bold">الصورة الشخصية للبادج والدخول البوابي *</label>
+                                <div class="flex items-center gap-3">
+                                    <label for="reg-photo" class="flex-1 flex flex-col items-center justify-center border border-dashed border-white/10 hover:border-yemenRed/40 bg-slate-950 rounded-xl p-3 cursor-pointer transition-all duration-300">
+                                        <div class="flex flex-col items-center justify-center text-center space-y-1">
+                                            <i class="fas fa-camera text-slate-400 text-sm" id="upload-icon"></i>
+                                            <span class="text-[10px] text-slate-300 font-bold" id="upload-status-text">اضغط لرفع صورتك الشخصية</span>
+                                        </div>
+                                        <input type="file" id="reg-photo" accept="image/*" class="hidden" required onchange="handlePhotoUpload(event)">
+                                    </label>
+                                    
+                                    <div class="w-12 h-12 rounded-xl border border-white/10 bg-slate-950 overflow-hidden flex items-center justify-center shrink-0 shadow-md relative" id="photo-preview-container">
+                                        <span class="text-base text-slate-600" id="photo-preview-placeholder"><i class="far fa-image"></i></span>
+                                        <img id="photo-preview-img" src="" class="w-full h-full object-cover hidden">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="submit-btn-text" class="w-full py-3 bg-gradient-to-r from-yemenRed to-rose-700 hover:from-rose-600 hover:to-yemenRed text-white font-black rounded-lg text-xs flex items-center justify-center gap-1.5 shadow-md hover:shadow-neon-red transition-all duration-300 active:scale-95">
+                                <span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="glass-card p-4 rounded-2xl border border-yemenRed/30 bg-slate-900/90 space-y-4 shadow-xl hidden" id="ticket-result-panel">
+                        <div class="text-center space-y-0.5">
+                            <h3 class="text-sm font-black text-emerald-400 flex items-center justify-center gap-1"><i class="fas fa-check-circle"></i> تم تأكيد الحجز بنجاح!</h3>
+                            <p class="text-[10px] text-slate-400 font-bold">وصلتك الآن نسخة التذكرة الإلكترونية الرسمية على بريدك.</p>
+                        </div>
+
+                        <div class="border border-white/10 rounded-2xl bg-[#000000] text-white p-4 space-y-4 relative overflow-hidden max-w-[280px] sm:max-w-xs mx-auto shadow-2xl" id="ticket-to-print">
+                            <div class="absolute top-0 left-0 w-2 h-full flex flex-col z-10">
+                                <div class="h-1/3 bg-yemenRed w-full"></div>
+                                <div class="h-1/3 bg-white w-full"></div>
+                                <div class="h-1/3 bg-black w-full"></div>
+                            </div>
+                            
+                            <div class="flex justify-between items-center border-b border-white/10 pb-2 ps-2 relative z-20">
+                                <div class="text-right">
+                                    <h4 class="font-black text-xs text-white">YEMEN <span class="text-yemenRed">NEXUS</span> HR</h4>
+                                    <span class="text-[7px] text-slate-400 block font-mono font-bold mt-0.5">Launch Event 2026</span>
+                                </div>
+                                <span class="text-[7px] bg-gradient-to-r from-yemenRed to-rose-700 text-white px-2 py-0.5 rounded border border-yemenRed/30 font-black shadow uppercase">VIP GUEST</span>
+                            </div>
+
+                            <div class="flex items-center gap-3.5 ps-2 py-0.5 relative z-20">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-yemenRed overflow-hidden shrink-0 bg-yemenGrey shadow-md flex items-center justify-center">
+                                    <img id="ticket-lbl-photo" src="" alt="Guest Image" class="w-full h-full object-cover">
+                                </div>
+                                <div class="space-y-1.5 text-[10px] sm:text-xs text-right flex-1">
+                                    <div><span class="text-[8px] text-slate-500 block font-bold">الاسم:</span><span class="font-black text-xs text-white block mt-0.5 leading-tight" id="ticket-lbl-name">-</span></div>
+                                    <div><span class="text-[8px] text-slate-500 block font-bold">الشركة/الجهة:</span><span class="font-bold text-slate-200 text-[11px] block" id="ticket-lbl-company">-</span></div>
+                                    <div><span class="text-[8px] text-slate-500 block font-bold">المنصب:</span><span class="font-bold text-slate-300 text-[10px] block" id="ticket-lbl-job">-</span></div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center pt-2.5 border-t border-white/10 ps-2 relative z-20">
+                                <div class="text-right">
+                                    <span class="text-[8px] text-slate-500 font-bold block">رقم المقعد والتذكرة:</span>
+                                    <span class="font-mono text-xs text-yellow-400 font-black tracking-wider block mt-0.5" id="ticket-lbl-id">-</span>
+                                </div>
+                                <div class="bg-white p-1 rounded-lg border border-white/10 inline-block">
+                                    <img id="ticket-qr-img" src="" alt="QR" class="w-11 h-11 sm:w-14 sm:h-14">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-2 max-w-[280px] sm:max-w-xs mx-auto">
+                            <button onclick="downloadTicketAsImage()" class="w-1/2 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-black rounded-lg text-[10px] flex items-center justify-center gap-1 shadow-md hover:shadow-neon-green duration-300">📱 كصورة</button>
+                            <button onclick="resetTicketForm()" class="w-1/2 py-2 bg-slate-800 text-white font-black rounded-lg text-[10px] flex items-center justify-center gap-1 transition-all">الرئيسية <i class="fas fa-redo text-[9px]"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-yemenDark border-t border-white/5 py-4 text-center text-[10px] text-slate-500 mt-10">
+         <p>© 2026 يمن نيكسوس التقنية | نحو بيئة عمل رقمية ذكية وعالمية المعايير والسيادة</p>
+    </footer>
+
+    <script>
+        // 🔗 رابط محرك الـ Web App ليرتبط من أي دومين أو استضافة خارجية مباشرة
+        const GOOGLE_SCRIPT_API_URL = "https://script.google.com/macros/s/AKfycbzs1NmaX1Ezoh4HQPtdQZf-K8bTh8wo5qcw619g1DpLvu7qKHR3yq_TqYywRuZQi-_BEw/exec";
+
+        let uploadedPhotoBase64 = "";
+
+        function showAgendaTab(tabId) {
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`content-tab-${i}`).classList.add('hidden');
+                document.getElementById(`btn-tab-${i}`).className = "py-2 text-[10px] font-black rounded-lg transition-all duration-300 text-slate-400 hover:text-white";
+            }
+            document.getElementById(`content-tab-${tabId}`).classList.remove('hidden');
+            document.getElementById(`btn-tab-${tabId}`).className = "py-2 text-[10px] font-black rounded-lg transition-all duration-300 bg-yemenRed text-white shadow-neon-red";
+        }
+
+        function triggerCelebrationBubbles() {
+            var duration = 4 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 4,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0, y: 0.8 },
+                    colors: ['#D60A17', '#ffffff', '#FFB800']
+                });
+                confetti({
+                    particleCount: 4,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1, y: 0.8 },
+                    colors: ['#D60A17', '#ffffff', '#FFB800']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        function handlePhotoUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                if (file.size > 4 * 1024 * 1024) {
+                    showToast("حجم الصورة كبير، يرجى اختيار صورة أقل من 4 ميغابايت.", "error");
+                    event.target.value = ""; return;
+                }
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    uploadedPhotoBase64 = e.target.result;
+                    const previewImg = document.getElementById('photo-preview-img');
+                    const placeholder = document.getElementById('photo-preview-placeholder');
+                    previewImg.src = uploadedPhotoBase64; previewImg.classList.remove('hidden'); placeholder.classList.add('hidden');
+                    document.getElementById('upload-status-text').innerText = "تم تجهيز صورتك بنجاح ✨";
+                    document.getElementById('upload-icon').className = "fas fa-check-circle text-emerald-400 text-base";
+                    showToast("جاهز للبادج الإلكتروني!", "success");
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', (event) => { updateLiveSeatsCounter(); });
+
+        function updateLiveSeatsCounter() {
+            // التعديل: تكييف الجلب من الدومين الخارجي أيضاً
+            fetch(`${GOOGLE_SCRIPT_API_URL}?scan=SEATS_REQUEST_LIVE`)
+                .then(res => res.json())
+                .then(count => {
+                    var counterEl = document.getElementById('live-seats-counter');
+                    if (counterEl) counterEl.innerHTML = count + " مقعد متبقٍ";
+                })
+                .catch(err => {
+                    // معالجة جلب الـ API لبيئة جوجل الأساسية
+                    if (typeof google !== 'undefined' && google.script && google.script.run) {
+                        google.script.run.withSuccessHandler(function(count) {
+                            var counterEl = document.getElementById('live-seats-counter');
+                            if (counterEl) counterEl.innerHTML = count + " مقعد متبقٍ";
+                        }).getAvailableSeatsCount();
+                    } else {
+                        var counterEl = document.getElementById('live-seats-counter');
+                        if (counterEl) counterEl.innerHTML = "134 مقعد متبقٍ";
+                    }
+                });
+        }
+
+        function submitNexusRegistration(event) {
+            event.preventDefault();
+            if (!uploadedPhotoBase64) { showToast("يرجى رفع صورتك الشخصية أولاً.", "error"); return; }
+            
+            const submitBtn = document.getElementById('submit-btn-text');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>جاري تجهيز تذكرتك...</span> <i class="fas fa-spinner animate-spin text-[10px]"></i>';
+
+            const name = document.getElementById('reg-name').value.trim();
+            const company = document.getElementById('reg-company').value.trim();
+            const job = document.getElementById('reg-job').value.trim();
+            const email = document.getElementById('reg-email').value.trim();
+            const phone = document.getElementById('reg-phone').value.trim();
+
+            // 🔗 تعديل الربط الإمبراطوري ليتخاطب مع السيرفر كـ API خارجي من أي دومين
+            const urlParams = `?NAME=${encodeURIComponent(name)}&COMPANY=${encodeURIComponent(company)}&JOB=${encodeURIComponent(job)}&EMAIL=${encodeURIComponent(email)}&PHONE=${encodeURIComponent(phone)}`;
+
+            if (typeof google !== 'undefined' && google.script && google.script.run) {
+                // الوضع الداخلي لجوجل
+                const initialData = { NAME: name, COMPANY: company, JOB: job, EMAIL: email, PHONE: phone };
+                google.script.run
+                    .withSuccessHandler(function(response) {
+                        if (response && response.status === "SUCCESS") {
+                            renderFinalTicket(response.ticketID, name, company, job);
+                        } else {
+                            resetSubmitBtn(submitBtn, response.message || "عذراً، حدث خطأ.");
+                        }
+                    })
+                    .withFailureHandler(function(error) {
+                        resetSubmitBtn(submitBtn, "خطأ سيرفر: " + error.toString());
+                    })
+                    .processRegistration(initialData);
+            } else {
+                // الوضع الخارجي للدومينات المستقلة و GitHub
+                fetch(GOOGLE_SCRIPT_API_URL + urlParams)
+                    .then(res => res.json())
+                    .then(response => {
+                        if (response && response.status === "SUCCESS") {
+                            renderFinalTicket(response.ticketID, name, company, job);
+                        } else {
+                            resetSubmitBtn(submitBtn, response.message || "عذراً، حدث خطأ.");
+                        }
+                    })
+                    .catch(error => {
+                        resetSubmitBtn(submitBtn, "خطأ في الاتصال بالشبكة السحابية");
+                    });
+            }
+        }
+
+        function renderFinalTicket(ticketID, name, company, job) {
+            const submitBtn = document.getElementById('submit-btn-text');
+            document.getElementById('ticket-lbl-name').innerText = name;
+            document.getElementById('ticket-lbl-company').innerText = company;
+            document.getElementById('ticket-lbl-job').innerText = job;
+            document.getElementById('ticket-lbl-id').innerText = ticketID;
+            document.getElementById('ticket-lbl-photo').src = uploadedPhotoBase64;
+
+            const qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(ticketID);
+            const qrImg = document.getElementById('ticket-qr-img');
+            qrImg.src = qrUrl;
+
+            document.getElementById('ticket-result-panel').classList.remove('hidden');
+            document.getElementById('input-ticket-form').classList.add('hidden');
+
+            qrImg.onload = function() {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
+                showToast("تم حجز مقعدك وتوليد باج الدخول الخاص بك بنجاح!", "success");
+                updateLiveSeatsCounter();
+                triggerCelebrationBubbles();
+                document.getElementById('ticket-result-panel').scrollIntoView({ behavior: 'smooth' });
+            };
+        }
+
+        function resetSubmitBtn(btn, msg) {
+            btn.disabled = false;
+            btn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
+            showToast(msg, "error");
+        }
+
+        function downloadTicketAsImage() {
+            const element = document.getElementById('ticket-to-print');
+            const ticketNumber = document.getElementById('ticket-lbl-id').innerText;
+            showToast("جاري حفظ التذكرة...", "success");
+            html2canvas(element, { useCORS: true, allowTaint: true, scale: 2.5, backgroundColor: "#000000" }).then(canvas => {
+                const image = canvas.toDataURL("image/png");
+                const createLink = document.createElement('a');
+                createLink.download = 'Yemennexus_VIP_Badge_' + ticketNumber + '.png';
+                createLink.href = image; createLink.click();
+                showToast("تم تحميل كرت البادج بنجاح! 🎉", "success");
+            }).catch(err => { showToast("حدث خطأ في تحميل الصورة.", "error"); });
+        }
+
+        function resetTicketForm() {
+            document.getElementById('input-ticket-form').classList.remove('hidden');
+            document.getElementById('ticket-result-panel').classList.add('hidden');
+            document.getElementById('nexusRegisterForm').reset();
+            uploadedPhotoBase64 = "";
+            document.getElementById('photo-preview-img').src = "";
+            document.getElementById('photo-preview-img').classList.add('hidden');
+            document.getElementById('photo-preview-placeholder').classList.remove('hidden');
+            document.getElementById('upload-status-text').innerText = "اضغط لرفع وصنع صورتك التفاعلية";
+            document.getElementById('upload-icon').className = "fas fa-camera text-slate-400 text-sm";
+            document.getElementById('reg-photo').value = "";
+            document.getElementById('main-body').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showToast(message, type) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            const toastIcon = document.getElementById('toast-icon');
+            toastMsg.innerText = message;
+            if (type === "success") toastIcon.innerHTML = '<i class="fas fa-check-circle text-emerald-500 animate-pulse"></i>';
+            else toastIcon.innerHTML = '<i class="fas fa-exclamation-triangle text-yemenRed"></i>';
+            toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+            setTimeout(() => { toast.classList.add('translate-y-[-100px]', 'opacity-0'); }, 4000);
+        }
+    </script>
+</body>
+</html>
