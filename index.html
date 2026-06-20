@@ -51,12 +51,13 @@
             50% { border-color: #FFFFFF; box-shadow: 0 0 15px rgba(255, 255, 255, 0.15); } 
         }
 
+        /* 🌌 محرك الجزيئات والكرات المكثف لأسفل (Matrix Rainfall Effect) */
         .tech-bg {
             position: fixed; inset: 0; pointer-events: none; z-index: 0; background-color: #030305;
         }
         .particle {
             position: absolute; background: linear-gradient(to bottom, rgba(214, 10, 23, 0.3), rgba(214, 10, 23, 0.05)); border-radius: 50%;
-            animation: fallLines 7s infinite linear; box-shadow: 0 0 10px rgba(214, 10, 23, 0.4);
+            animation: fallLines 4.5s infinite linear; box-shadow: 0 0 10px rgba(214, 10, 23, 0.4);
         }
         @keyframes fallLines {
             0% { transform: translateY(-10vh) scale(0.4); opacity: 0; }
@@ -72,14 +73,14 @@
         <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808003_1px,transparent_1px),linear-gradient(to_bottom,#80808003_1px,transparent_1px)] bg-[size:30px_30px]"></div>
         <div class="absolute top-[-20%] right-[-10%] w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] rounded-full bg-yemenRed/10 blur-[120px]"></div>
         
-        <div class="particle w-2 h-2 left-[4%]" style="animation-delay: 0s; animation-duration: 5.5s;"></div>
-        <div class="particle w-3.5 h-3.5 left-[14%]" style="animation-delay: 2.5s; animation-duration: 7s;"></div>
-        <div class="particle w-1.5 h-1.5 left-[25%]" style="animation-delay: 0.8s; animation-duration: 4.5s;"></div>
-        <div class="particle w-2.5 h-2.5 left-[38%]" style="animation-delay: 3.5s; animation-duration: 6s;"></div>
-        <div class="particle w-4 h-4 left-[52%]" style="animation-delay: 1.5s; animation-duration: 7.5s;"></div>
-        <div class="particle w-2 h-2 left-[67%]" style="animation-delay: 4s; animation-duration: 5s;"></div>
-        <div class="particle w-3 h-3 left-[80%]" style="animation-delay: 2.2s; animation-duration: 6.5s;"></div>
-        <div class="particle w-1.5 h-1.5 left-[92%]" style="animation-delay: 5s; animation-duration: 4.8s;"></div>
+        <div class="particle w-2 h-2 left-[4%]" style="animation-delay: 0s; animation-duration: 4s;"></div>
+        <div class="particle w-3.5 h-3.5 left-[14%]" style="animation-delay: 1.5s; animation-duration: 5.5s;"></div>
+        <div class="particle w-1.5 h-1.5 left-[25%]" style="animation-delay: 0.5s; animation-duration: 3.5s;"></div>
+        <div class="particle w-2.5 h-2.5 left-[38%]" style="animation-delay: 2s; animation-duration: 5s;"></div>
+        <div class="particle w-4 h-4 left-[52%]" style="animation-delay: 1s; animation-duration: 6s;"></div>
+        <div class="particle w-2 h-2 left-[67%]" style="animation-delay: 2.8s; animation-duration: 4.2s;"></div>
+        <div class="particle w-3 h-3 left-[80%]" style="animation-delay: 1.2s; animation-duration: 5.2s;"></div>
+        <div class="particle w-1.5 h-1.5 left-[92%]" style="animation-delay: 3.2s; animation-duration: 3.8s;"></div>
     </div>
 
     <div id="toast" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 transform translate-y-[-100px] opacity-0 transition-all duration-400 w-[88%] max-w-xs">
@@ -103,7 +104,7 @@
                 </div>
             </div>
             <div>
-                <a href="#register" class="bg-gradient-to-r from-yemenRed to-rose-700 hover:from-rose-600 hover:to-yemenRed text-white text-[10px] font-black px-3 py-2 rounded-lg transition-all shadow-md active:scale-95 flex items-center gap-1">
+                <a href="#register" class="bg-gradient-to-r from-yemenRed_to_rose-700 text-white text-[10px] font-black px-3 py-2 rounded-lg transition-all shadow-md active:scale-95 flex items-center gap-1">
                     <span>احجز VIP</span> <i class="fas fa-ticket-alt text-[9px]"></i>
                 </a>
             </div>
@@ -112,6 +113,7 @@
 
     <main class="relative z-10 max-w-4xl mx-auto px-4 py-4 space-y-12 sm:space-y-16">
         
+        <!-- قسم الهيرو -->
         <section id="hero" class="grid lg:grid-cols-12 gap-6 items-center text-right pt-2">
             <div class="lg:col-span-8 space-y-4">
                 <div class="inline-flex items-center gap-1.5 bg-yemenRed/10 border border-yemenRed/20 px-3 py-1 rounded-full text-[10px] font-bold text-yemenRed">
@@ -156,6 +158,7 @@
             </div>
         </section>
 
+        <!-- الفلسفة والرؤية -->
         <section id="vision-mission" class="space-y-6">
             <div class="text-center max-w-xl mx-auto space-y-1">
                 <span class="text-[9px] font-black tracking-wider text-yemenRed uppercase bg-yemenRed/10 px-2.5 py-1 rounded-full">الهوية الاستراتيجية للمنظومة</span>
@@ -195,6 +198,7 @@
             </div>
         </section>
 
+        <!-- الأجندة التفاعلية -->
         <section id="agenda" class="space-y-4">
             <div class="text-center max-w-xl mx-auto space-y-1">
                 <span class="text-[9px] font-black tracking-wider text-yemenRed uppercase bg-yemenRed/10 px-2.5 py-1 rounded-full">الجدول اللوجستي لأحداث المؤتمر 2026</span>
@@ -248,6 +252,7 @@
             </div>
         </section>
 
+        <!-- قسم الاستمارة وحجز البادج -->
         <section id="register" class="bg-gradient-to-tr from-yemenDark via-[#0b0b0f] to-yemenDark border border-white/5 rounded-2xl p-4 sm:p-6 relative overflow-hidden shadow-xl">
             <div class="grid lg:grid-cols-12 gap-6 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-2 text-right">
@@ -325,7 +330,7 @@
                             
                             <div class="flex justify-between items-center border-b border-white/10 pb-2 ps-2 relative z-20">
                                 <div class="text-right">
-                                    <h4 class="font-black text-xs text-white">YEMEN <span class="text-yemenRed">NEXUS</span> HR</h4>
+                                    <h4 class="font-black text-xs text-white">YEMEN <span class="text-yemenRed">NEXUS</span> COMPANY</h4>
                                     <span class="text-[7px] text-slate-400 block font-mono font-bold mt-0.5">Launch Event 2026</span>
                                 </div>
                                 <span class="text-[7px] bg-gradient-to-r from-yemenRed to-rose-700 text-white px-2 py-0.5 rounded border border-yemenRed/30 font-black shadow uppercase">VIP GUEST</span>
@@ -368,6 +373,9 @@
     </footer>
 
     <script>
+        // 🔗 رابط محرك الـ Web App الخاص بك ليرتبط ديناميكياً من GitHub أو أي نطاق خارجي
+        const GOOGLE_SCRIPT_API_URL = "https://script.google.com/macros/s/AKfycbzs1NmaX1Ezoh4HQPtdQZf-K8bTh8wo5qcw619g1DpLvu7qKHR3yq_TqYywRuZQi-_BEw/exec";
+
         let uploadedPhotoBase64 = "";
 
         function showAgendaTab(tabId) {
@@ -428,6 +436,7 @@
 
         window.addEventListener('DOMContentLoaded', (event) => { updateLiveSeatsCounter(); });
 
+        // 🔥 [التحديث]: جلب المقاعد حياً وعابراً للنطاقات عبر بروتوكول fetch من GitHub
         function updateLiveSeatsCounter() {
             if (typeof google !== 'undefined' && google.script && google.script.run) {
                 google.script.run
@@ -435,17 +444,22 @@
                         var counterEl = document.getElementById('live-seats-counter');
                         if (counterEl) counterEl.innerHTML = count + " مقعد متبقٍ";
                     })
-                    .withFailureHandler(function(err) {
-                        var counterEl = document.getElementById('live-seats-counter');
-                        if (counterEl) counterEl.innerHTML = "214 مقعد متبقٍ";
-                    })
                     .getAvailableSeatsCount();
             } else {
-                var counterEl = document.getElementById('live-seats-counter');
-                if (counterEl) counterEl.innerHTML = "143 مقعد متبقٍ";
+                fetch(`${GOOGLE_SCRIPT_API_URL}?scan=GET_LIVE_SEATS`)
+                    .then(res => res.json())
+                    .then(count => {
+                        var counterEl = document.getElementById('live-seats-counter');
+                        if (counterEl) counterEl.innerHTML = count + " مقعد متبقٍ";
+                    })
+                    .catch(err => {
+                        var counterEl = document.getElementById('live-seats-counter');
+                        if (counterEl) counterEl.innerHTML = "143 مقعد متبقٍ";
+                    });
             }
         }
 
+        // 🔥 [الهندسة الفوقية]: التحديث الكلي لدالة الإرسال لتدعم بروتوكول fetch الخارجي بنسبة 100%
         function submitNexusRegistration(event) {
             event.preventDefault();
             if (!uploadedPhotoBase64) { showToast("يرجى رفع صورتك الشخصية أولاً.", "error"); return; }
@@ -458,64 +472,95 @@
             const company = document.getElementById('reg-company').value.trim();
             const job = document.getElementById('reg-job').value.trim();
             const email = document.getElementById('reg-email').value.trim();
-            const phone = document.getElementById('reg-phone').value.trim(); // قراءة رقم الهاتف
+            const phone = document.getElementById('reg-phone').value.trim();
 
-            // تضمين الـ PHONE في مصفوفة البيانات المرفوعة للسيرفر
             const initialData = { NAME: name, COMPANY: company, JOB: job, EMAIL: email, PHONE: phone };
 
+            // إذا كانت الصفحة تفتح داخل سياق سيرفرات جوجل المباشر (إجراء احتياطي)
             if (typeof google !== 'undefined' && google.script && google.script.run) {
                 google.script.run
                     .withSuccessHandler(function(response) {
                         if (response && response.status === "SUCCESS") {
-                            document.getElementById('ticket-lbl-name').innerText = name;
-                            document.getElementById('ticket-lbl-company').innerText = company;
-                            document.getElementById('ticket-lbl-job').innerText = job;
-                            document.getElementById('ticket-lbl-id').innerText = response.ticketID;
-                            document.getElementById('ticket-lbl-photo').src = uploadedPhotoBase64;
-
-                            const qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(response.ticketID);
-                            const qrImg = document.getElementById('ticket-qr-img');
-                            qrImg.src = qrUrl;
-
-                            document.getElementById('ticket-result-panel').classList.remove('hidden');
-                            document.getElementById('input-ticket-form').classList.add('hidden');
-
-                            qrImg.onload = function() {
-                                submitBtn.disabled = false;
-                                submitBtn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
-                                showToast("تم حجز مقعدك وتوليد باج الدخول الخاص بك بنجاح!", "success");
-                                updateLiveSeatsCounter();
-                                triggerCelebrationBubbles();
-                                document.getElementById('ticket-result-panel').scrollIntoView({ behavior: 'smooth' });
-                            };
+                            renderFinalTicket(response, name, company, job, submitBtn);
                         } else {
-                            submitBtn.disabled = false;
-                            submitBtn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
-                            showToast(response.message || "عذراً، حدث خطأ.", "error");
+                            resetSubmitButton(submitBtn, response.message);
                         }
                     })
                     .withFailureHandler(function(error) {
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
-                        showToast("خطأ سيرفر: " + error.toString(), "error");
+                        resetSubmitButton(submitBtn, "خطأ سيرفر: " + error.toString());
                     })
                     .processRegistration(initialData);
             } else {
-                setTimeout(() => {
-                    document.getElementById('ticket-lbl-name').innerText = name;
-                    document.getElementById('ticket-lbl-company').innerText = company;
-                    document.getElementById('ticket-lbl-job').innerText = job;
-                    document.getElementById('ticket-lbl-id').innerText = "YEMENEXUS-TICK-0054";
-                    document.getElementById('ticket-lbl-photo').src = uploadedPhotoBase64;
-                    document.getElementById('ticket-qr-img').src = "https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=YEMENEXUS-TICK-0054";
-                    document.getElementById('ticket-result-panel').classList.remove('hidden');
-                    document.getElementById('input-ticket-form').classList.add('hidden');
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
-                    showToast("محاكاة ناجحة للبادج الملموم الفخم!", "success");
-                    triggerCelebrationBubbles();
-                }, 1000);
+                // 🚀 [منظومة الفيتش السحابي]: التخاطب التلقائي من GitHub إلى قاعدة بيانات جوجل شيت مباشرة
+                const urlParams = `?NAME=${encodeURIComponent(name)}&COMPANY=${encodeURIComponent(company)}&JOB=${encodeURIComponent(job)}&EMAIL=${encodeURIComponent(email)}&PHONE=${encodeURIComponent(phone)}`;
+                
+                fetch(GOOGLE_SCRIPT_API_URL + urlParams)
+                    .then(res => res.json())
+                    .then(response => {
+                        if (response && response.status === "SUCCESS") {
+                            renderFinalTicket(response, name, company, job, submitBtn);
+                        } else {
+                            resetSubmitButton(submitBtn, response.message);
+                        }
+                    })
+                    .catch(error => {
+                        resetSubmitButton(submitBtn, "حدثت عقبة أثناء الاتصال بقاعدة البيانات السحابية.");
+                    });
             }
+        }
+
+        // دالة حقن البيانات وتوليد التذكرة والتقاط صورة البادج ورفعها
+        function renderFinalTicket(response, name, company, job, submitBtn) {
+            document.getElementById('ticket-lbl-name').innerText = name;
+            document.getElementById('ticket-lbl-company').innerText = company;
+            document.getElementById('ticket-lbl-job').innerText = job;
+            document.getElementById('ticket-lbl-id').innerText = response.ticketID;
+            document.getElementById('ticket-lbl-photo').src = uploadedPhotoBase64;
+
+            const qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(response.ticketID);
+            const qrImg = document.getElementById('ticket-qr-img');
+            qrImg.src = qrUrl;
+
+            document.getElementById('ticket-result-panel').classList.remove('hidden');
+            document.getElementById('input-ticket-form').classList.add('hidden');
+
+            qrImg.onload = function() {
+                // إعطاء فرصة ربع ثانية للمتصفح ليستقر ثم تصوير الكرت بالكامل ورفعه لخانة PHOTO
+                setTimeout(function() {
+                    const element = document.getElementById('ticket-to-print');
+                    html2canvas(element, { useCORS: true, allowTaint: true, scale: 1.2, backgroundColor: "#000000" }).then(canvas => {
+                        const badgeBase64 = canvas.toDataURL("image/png");
+                        
+                        // رفع صورة الكرت كامل مكمل عبر دالة السيرفر الخلفية المستقلة
+                        if (typeof google !== 'undefined' && google.script && google.script.run) {
+                            google.script.run.withSuccessHandler(function() {
+                                finalizeRegistrationProcess(submitBtn);
+                            }).uploadBadgeImage(response.rowIndex, badgeBase64);
+                        } else {
+                            // الحفظ عابر النطاقات من GitHub عبر الـ fetch
+                            const uploadParams = `?action=upload&rowIndex=${response.rowIndex}&photo=${encodeURIComponent(badgeBase64)}`;
+                            fetch(GOOGLE_SCRIPT_API_URL + uploadParams)
+                                .then(() => finalizeRegistrationProcess(submitBtn))
+                                .catch(() => finalizeRegistrationProcess(submitBtn));
+                        }
+                    }).catch(() => finalizeRegistrationProcess(submitBtn));
+                }, 250);
+            };
+        }
+
+        function finalizeRegistrationProcess(submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
+            showToast("تم حجز مقعدك وتوليد باج الدخول الخاص بك بنجاح!", "success");
+            updateLiveSeatsCounter();
+            triggerCelebrationBubbles();
+            document.getElementById('ticket-result-panel').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetSubmitButton(btn, errorMsg) {
+            btn.disabled = false;
+            btn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
+            showToast(errorMsg || "عذراً، حدث خطأ غير متوقع.", "error");
         }
 
         function downloadTicketAsImage() {
