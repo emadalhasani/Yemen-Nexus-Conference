@@ -12,6 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
     <script>
         tailwind.config = {
             theme: {
@@ -51,7 +52,6 @@
             50% { border-color: #FFFFFF; box-shadow: 0 0 15px rgba(255, 255, 255, 0.15); } 
         }
 
-        /* 🌌 محرك الجزيئات والكرات المكثف لأسفل (Matrix Rainfall Effect) */
         .tech-bg {
             position: fixed; inset: 0; pointer-events: none; z-index: 0; background-color: #030305;
         }
@@ -104,8 +104,8 @@
                 </div>
             </div>
             <div>
-                <a href="#register" class="bg-gradient-to-r from-yemenRed_to_rose-700 text-white text-[10px] font-black px-3 py-2 rounded-lg transition-all shadow-md active:scale-95 flex items-center gap-1">
-                    <span>احجز VIP</span> <i class="fas fa-ticket-alt text-[9px]"></i>
+                <a href="#register" class="bg-gradient-to-r from-yemenRed to-rose-700 text-white text-[10px] font-black px-3 py-2 rounded-lg transition-all shadow-md active:scale-95 flex items-center gap-1">
+                    <span>احجز مقعدك</span> <i class="fas fa-ticket-alt text-[9px]"></i>
                 </a>
             </div>
         </nav>
@@ -113,7 +113,6 @@
 
     <main class="relative z-10 max-w-4xl mx-auto px-4 py-4 space-y-12 sm:space-y-16">
         
-        <!-- قسم الهيرو -->
         <section id="hero" class="grid lg:grid-cols-12 gap-6 items-center text-right pt-2">
             <div class="lg:col-span-8 space-y-4">
                 <div class="inline-flex items-center gap-1.5 bg-yemenRed/10 border border-yemenRed/20 px-3 py-1 rounded-full text-[10px] font-bold text-yemenRed">
@@ -125,14 +124,14 @@
                     <h1 class="text-2xl sm:text-4xl font-black leading-tight text-white tracking-tight">نبتكر لترسم <span class="text-transparent bg-clip-text bg-gradient-to-l from-yemenRed to-rose-500">المستقبل الرقمي</span></h1>
                     <p class="text-xs sm:text-sm font-medium text-slate-300">نحو بيئة عمل ذكية، مترابطة، وعالمية المعايير والسيادة الرقمية.</p>
                     <p class="text-slate-400 text-[11px] leading-relaxed max-w-xl font-normal">
-                        يسر شركة <span class="text-white font-bold">يمن نيكسوس</span> دعوتكم لحضور حفل التدشين السنوي الخاص بإطلاق المنصة السحابية المتكاملة لإدارة الموارد البشرية <span class="text-yemenRed font-bold">Yemen Nexus HR</span> الشريك التقني الأقوى للأعمال المستدامة.
+                        يسر شركة <span class="text-white font-bold">Nexus Technology</span> دعوتكم لحضور حفل التدشين السنوي الخاص بإطلاق المنصة السحابية المتكاملة لإدارة الموارد البشرية <span class="text-yemenRed font-bold">Yemen Nexus HR</span> الشريك التقني الأقوى للأعمال المستدامة.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-3 pt-2 max-w-md">
                     <div class="p-2.5 bg-gradient-to-br from-yemenRed/10 via-transparent to-transparent border border-yemenRed/20 rounded-xl text-center shadow">
                         <span class="block text-sm sm:text-base font-black text-emerald-400 font-mono" id="live-seats-counter">
-                            <i class="fas fa-spinner animate-spin text-[10px] text-white"></i>
+                            <i class="fas fa-spinner animate-spin text-[10px] text-white"></i> جاري التحميل...
                         </span>
                         <span class="text-[9px] font-bold text-slate-300 block mt-0.5">مقعد عام متاح حالياً</span>
                     </div>
@@ -158,7 +157,6 @@
             </div>
         </section>
 
-        <!-- الفلسفة والرؤية -->
         <section id="vision-mission" class="space-y-6">
             <div class="text-center max-w-xl mx-auto space-y-1">
                 <span class="text-[9px] font-black tracking-wider text-yemenRed uppercase bg-yemenRed/10 px-2.5 py-1 rounded-full">الهوية الاستراتيجية للمنظومة</span>
@@ -189,70 +187,34 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 pt-1">
-                <div class="glass-card p-3 rounded-xl text-center"><span class="text-sm text-yemenRed block mb-1"><i class="fas fa-cubes"></i></span><h4 class="text-[11px] font-bold text-white mb-0.5">منظومة Ecosystem</h4></div>
-                <div class="glass-card p-3 rounded-xl text-center"><span class="text-sm text-yemenRed block mb-1"><i class="fas fa-users-cog"></i></span><h4 class="text-[11px] font-bold text-white mb-0.5">توطين الكفاءات</h4></div>
-                <div class="glass-card p-3 rounded-xl text-center"><span class="text-sm text-yemenRed block mb-1"><i class="fas fa-magic"></i></span><h4 class="text-[11px] font-bold text-white mb-0.5">سهولة الاستخدام</h4></div>
-                <div class="glass-card p-3 rounded-xl text-center"><span class="text-sm text-yemenRed block mb-1"><i class="fas fa-shield-alt"></i></span><h4 class="text-[11px] font-bold text-white mb-0.5">سيادة رقمية</h4></div>
-            </div>
         </section>
 
-        <!-- الأجندة التفاعلية -->
-        <section id="agenda" class="space-y-4">
+        <section id="features" class="space-y-6">
             <div class="text-center max-w-xl mx-auto space-y-1">
-                <span class="text-[9px] font-black tracking-wider text-yemenRed uppercase bg-yemenRed/10 px-2.5 py-1 rounded-full">الجدول اللوجستي لأحداث المؤتمر 2026</span>
-                <h2 class="text-lg sm:text-xl font-black text-white">أجندة ومحاور المؤتمر التقني</h2>
+                <span class="text-[9px] font-black tracking-wider text-yemenRed uppercase bg-yemenRed/10 px-2.5 py-1 rounded-full">المميزات الأساسية للأنظمة</span>
+                <h2 class="text-lg sm:text-xl font-black text-white">منظومة ذكية متكاملة لإدارة أعمالك</h2>
                 <div class="w-10 h-0.5 bg-yemenRed mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-4 gap-1.5 bg-slate-900/60 p-1 rounded-xl border border-white/5 max-w-md mx-auto">
-                <button onclick="showAgendaTab(1)" id="btn-tab-1" class="py-2 text-[10px] font-black rounded-lg transition-all duration-300 bg-yemenRed text-white shadow-neon-red">المحور 1</button>
-                <button onclick="showAgendaTab(2)" id="btn-tab-2" class="py-2 text-[10px] font-black rounded-lg transition-all duration-300 text-slate-400 hover:text-white">المحور 2</button>
-                <button onclick="showAgendaTab(3)" id="btn-tab-3" class="py-2 text-[10px] font-black rounded-lg transition-all duration-300 text-slate-400 hover:text-white">المحور 3</button>
-                <button onclick="showAgendaTab(4)" id="btn-tab-4" class="py-2 text-[10px] font-black rounded-lg transition-all duration-300 text-slate-400 hover:text-white">الختام</button>
-            </div>
-
-            <div class="max-w-md mx-auto pt-1">
-                <div id="content-tab-1" class="glass-card p-4 rounded-xl border border-white/15 space-y-2 block">
-                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
-                        <span class="text-yemenRed font-black text-[10px] bg-yemenRed/10 px-2 py-0.5 rounded-md"><i class="far fa-clock"></i> 09:00 ص - 10:30 ص</span>
-                        <span class="text-slate-500 text-[9px] font-bold">الاستقبال والتسجيل</span>
-                    </div>
-                    <h3 class="text-xs sm:text-sm font-black text-white">استقبل الوفود، الرواد، وصناع القرار</h3>
-                    <p class="text-slate-400 text-[11px] leading-relaxed font-normal">بدء الفحص البوابي المباشر للتذاكر الإلكترونية الذكية وتوزيع البروشورات التعريفية الفاخرة لمنظومة اليمن نيكسوس السحابية.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                <div class="glass-card p-4 rounded-xl space-y-2 border border-white/5 hover:border-yemenRed/30 shadow">
+                    <div class="text-yemenRed text-base"><i class="fas fa-network-wired"></i></div>
+                    <h3 class="text-xs font-black text-white">بنية سحابية موحدة</h3>
+                    <p class="text-slate-400 text-[10.5px] leading-relaxed font-normal">ربط كامل الفروع والموظفين تحت مظلة برمجية واحدة مستقرة وبأعلى درجات الأمان المتقدم.</p>
                 </div>
-
-                <div id="content-tab-2" class="glass-card p-4 rounded-xl border border-white/15 space-y-2 hidden">
-                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
-                        <span class="text-yemenRed font-black text-[10px] bg-yemenRed/10 px-2 py-0.5 rounded-md"><i class="far fa-clock"></i> 10:30 ص - 12:00 م</span>
-                        <span class="text-yemenRed font-black text-[9px] bg-yemenRed/10 px-2 py-0.5 rounded-md font-bold">الافتتاح والتدشين</span>
-                    </div>
-                    <h3 class="text-xs sm:text-sm font-black text-white">حفل الافتتاح وعروض النظام والمزايا الحية الحتمية</h3>
-                    <p class="text-slate-400 text-[11px] leading-relaxed font-normal">عرض مرئي يجسد فلسفة التحول، يليه الكلمات الافتتاحية وتقديم استعراض حي ومباشر لكامل لوحات التحكم والمزايا في المنصة أمام الجمهور.</p>
+                <div class="glass-card p-4 rounded-xl space-y-2 border border-white/5 hover:border-yemenRed/30 shadow">
+                    <div class="text-yemenRed text-base"><i class="fas fa-chart-pie"></i></div>
+                    <h3 class="text-xs font-black text-white">تحليلات وذكاء أعمال</h3>
+                    <p class="text-slate-400 text-[10.5px] leading-relaxed font-normal">لوحات مؤشرات فورية وتقارير تفصيلية تدعم متخذي القرار لبناء استراتيجيات تشغيلية دقيقة.</p>
                 </div>
-
-                <div id="content-tab-3" class="glass-card p-4 rounded-xl border border-white/15 space-y-2 hidden">
-                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
-                        <span class="text-yemenRed font-black text-[10px] bg-yemenRed/10 px-2 py-0.5 rounded-md"><i class="far fa-clock"></i> 12:00 م - 12:30 م</span>
-                        <span class="text-slate-500 text-[9px] font-bold">الجلسة الاستراتيجية</span>
-                    </div>
-                    <h3 class="text-xs sm:text-sm font-black text-white">حلقة نقاشية مع قادة ومدراء الاستشارات والموارد البشرية</h3>
-                    <p class="text-slate-400 text-[11px] leading-relaxed font-normal">جلسة حوارية متميزة تسلط الضوء على تحديات الرقمنة الإدارية المحتوية للسيادة والخصوصية في السوق اليمني بمشاركة الرواد والمستشارين.</p>
-                </div>
-
-                <div id="content-tab-4" class="glass-card p-4 rounded-xl border border-white/15 space-y-2 hidden">
-                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
-                        <span class="text-yemenRed font-black text-[10px] bg-yemenRed/10 px-2 py-0.5 rounded-md"><i class="far fa-clock"></i> 12:30 م - 01:00 م</span>
-                        <span class="text-slate-500 text-[9px] font-bold">المراسم الختامية</span>
-                    </div>
-                    <h3 class="text-xs sm:text-sm font-black text-white">توقيع مذكرات الشراكة وإتاحة العروض الختامية</h3>
-                    <p class="text-slate-400 text-[11px] leading-relaxed font-normal">كلمة الشركاء والمستثمرين، توزيع الدروع والشهادات التقديرية، وإعلان إطلاق خصومات التدشين الحصرية لجميع وفود وحاضري المؤتمر.</p>
+                <div class="glass-card p-4 rounded-xl space-y-2 border border-white/5 hover:border-yemenRed/30 shadow">
+                    <div class="text-yemenRed text-base"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xs font-black text-white">تشفير وحماية السيادة</h3>
+                    <p class="text-slate-400 text-[10.5px] leading-relaxed font-normal">حماية تامة لقواعد البيانات مع تشفير قنوات الاتصال والتحقق المتعدد للهويات بمرونة مطلقة.</p>
                 </div>
             </div>
         </section>
 
-        <!-- قسم الاستمارة وحجز البادج -->
         <section id="register" class="bg-gradient-to-tr from-yemenDark via-[#0b0b0f] to-yemenDark border border-white/5 rounded-2xl p-4 sm:p-6 relative overflow-hidden shadow-xl">
             <div class="grid lg:grid-cols-12 gap-6 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-2 text-right">
@@ -272,7 +234,7 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div>
                                     <label class="block text-slate-400 mb-1 font-bold">الجهة / الشركة *</label>
-                                    <input type="text" id="reg-company" required placeholder="مثال: يمن نيكسوس" class="w-full bg-slate-950 border border-white/15 focus:border-yemenRed rounded-lg px-3 py-2 text-white outline-none font-medium text-xs">
+                                    <input type="text" id="reg-company" required placeholder="مثال: شركة النظم المتقدمة" class="w-full bg-slate-950 border border-white/15 focus:border-yemenRed rounded-lg px-3 py-2 text-white outline-none font-medium text-xs">
                                 </div>
                                 <div>
                                     <label class="block text-slate-400 mb-1 font-bold">المسمى الوظيفي الحالي *</label>
@@ -359,7 +321,7 @@
                         </div>
 
                         <div class="flex gap-2 max-w-[280px] sm:max-w-xs mx-auto">
-                            <button onclick="downloadTicketAsImage()" class="w-1/2 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-black rounded-lg text-[10px] flex items-center justify-center gap-1 shadow-md hover:shadow-neon-green duration-300">📱 كصورة</button>
+                            <button onclick="downloadTicketAsImage()" class="w-1/2 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-black rounded-lg text-[10px] flex items-center justify-center gap-1 shadow-md duration-300">📱 كصورة</button>
                             <button onclick="resetTicketForm()" class="w-1/2 py-2 bg-slate-800 text-white font-black rounded-lg text-[10px] flex items-center justify-center gap-1 transition-all">الرئيسية <i class="fas fa-redo text-[9px]"></i></button>
                         </div>
                     </div>
@@ -369,50 +331,27 @@
     </main>
 
     <footer class="bg-yemenDark border-t border-white/5 py-4 text-center text-[10px] text-slate-500 mt-10">
-         <p>© 2026 يمن نيكسوس التقنية | نحو بيئة عمل رقمية ذكية وعالمية المعايير والسيادة</p>
+         <p>© 2026 Nexus Technology | نحو بيئة عمل رقمية ذكية وعالمية المعايير والسيادة</p>
     </footer>
 
     <script>
-        // 🔗 رابط محرك الـ Web App الخاص بك ليرتبط ديناميكياً من GitHub أو أي نطاق خارجي
-        const GOOGLE_SCRIPT_API_URL = "https://script.google.com/macros/s/AKfycbzs1NmaX1Ezoh4HQPtdQZf-K8bTh8wo5qcw619g1DpLvu7qKHR3yq_TqYywRuZQi-_BEw/exec";
+        // 🔗 رابط النشر الفعلي لسكربت جوجل لتحديث قاعدة البيانات حياً ودون وسطاء
+        const GOOGLE_SCRIPT_API_URL = "https://script.google.com/macros/s/AKfycbwvnZNRIa1EO0hZKPBixh6svVmJAg4PCnbWWcKpYAZmGmiOdKidEUBQGOujsN2ZdCjERQ/exec";
 
         let uploadedPhotoBase64 = "";
 
-        function showAgendaTab(tabId) {
-            for (let i = 1; i <= 4; i++) {
-                document.getElementById(`content-tab-${i}`).classList.add('hidden');
-                document.getElementById(`btn-tab-${i}`).className = "py-2 text-[10px] font-black rounded-lg transition-all duration-300 text-slate-400 hover:text-white";
-            }
-            document.getElementById(`content-tab-${tabId}`).classList.remove('hidden');
-            document.getElementById(`btn-tab-${tabId}`).className = "py-2 text-[10px] font-black rounded-lg transition-all duration-300 bg-yemenRed text-white shadow-neon-red";
-        }
-
+        // نظام الاحتفالات والمؤثرات المتفجرة عند الحجز الناجح
         function triggerCelebrationBubbles() {
             var duration = 4 * 1000;
             var end = Date.now() + duration;
-
             (function frame() {
-                confetti({
-                    particleCount: 4,
-                    angle: 60,
-                    spread: 55,
-                    origin: { x: 0, y: 0.8 },
-                    colors: ['#D60A17', '#ffffff', '#FFB800']
-                });
-                confetti({
-                    particleCount: 4,
-                    angle: 120,
-                    spread: 55,
-                    origin: { x: 1, y: 0.8 },
-                    colors: ['#D60A17', '#ffffff', '#FFB800']
-                });
-
-                if (Date.now() < end) {
-                    requestAnimationFrame(frame);
-                }
+                confetti({ particleCount: 4, angle: 60, spread: 55, origin: { x: 0, y: 0.8 }, colors: ['#D60A17', '#ffffff', '#FFB800'] });
+                confetti({ particleCount: 4, angle: 120, spread: 55, origin: { x: 1, y: 0.8 }, colors: ['#D60A17', '#ffffff', '#FFB800'] });
+                if (Date.now() < end) { requestAnimationFrame(frame); }
             }());
         }
 
+        // معالجة وضغط الصورة الشخصية المرفوعة وتحويلها إلى Base64
         function handlePhotoUpload(event) {
             const file = event.target.files[0];
             if (file) {
@@ -434,32 +373,24 @@
             }
         }
 
+        // جلب عدد المقاعد تلقائياً فور فتح الصفحة
         window.addEventListener('DOMContentLoaded', (event) => { updateLiveSeatsCounter(); });
 
-        // 🔥 [التحديث]: جلب المقاعد حياً وعابراً للنطاقات عبر بروتوكول fetch من GitHub
+        // دالة جلب عدد المقاعد المتاحة حياً من جدول البيانات السحابي لقاعدة المعطيات
         function updateLiveSeatsCounter() {
-            if (typeof google !== 'undefined' && google.script && google.script.run) {
-                google.script.run
-                    .withSuccessHandler(function(count) {
-                        var counterEl = document.getElementById('live-seats-counter');
-                        if (counterEl) counterEl.innerHTML = count + " مقعد متبقٍ";
-                    })
-                    .getAvailableSeatsCount();
-            } else {
-                fetch(`${GOOGLE_SCRIPT_API_URL}?scan=GET_LIVE_SEATS`)
-                    .then(res => res.json())
-                    .then(count => {
-                        var counterEl = document.getElementById('live-seats-counter');
-                        if (counterEl) counterEl.innerHTML = count + " مقعد متبقٍ";
-                    })
-                    .catch(err => {
-                        var counterEl = document.getElementById('live-seats-counter');
-                        if (counterEl) counterEl.innerHTML = "143 مقعد متبقٍ";
-                    });
-            }
+            fetch(`${GOOGLE_SCRIPT_API_URL}?scan=GET_LIVE_SEATS`)
+                .then(res => res.json())
+                .then(count => {
+                    var counterEl = document.getElementById('live-seats-counter');
+                    if (counterEl) counterEl.innerHTML = count + " مقعد متبقٍ";
+                })
+                .catch(err => {
+                    var counterEl = document.getElementById('live-seats-counter');
+                    if (counterEl) counterEl.innerHTML = "143 مقعد متبقٍ";
+                });
         }
 
-        // 🔥 [الهندسة الفوقية]: التحديث الكلي لدالة الإرسال لتدعم بروتوكول fetch الخارجي بنسبة 100%
+        // دالة إرسال استمارة البيانات المحدثة بطريقة متوافقة تماماً مع سيرفرات جوجل شيت لمنع التجاهل
         function submitNexusRegistration(event) {
             event.preventDefault();
             if (!uploadedPhotoBase64) { showToast("يرجى رفع صورتك الشخصية أولاً.", "error"); return; }
@@ -474,42 +405,24 @@
             const email = document.getElementById('reg-email').value.trim();
             const phone = document.getElementById('reg-phone').value.trim();
 
-            const initialData = { NAME: name, COMPANY: company, JOB: job, EMAIL: email, PHONE: phone };
-
-            // إذا كانت الصفحة تفتح داخل سياق سيرفرات جوجل المباشر (إجراء احتياطي)
-            if (typeof google !== 'undefined' && google.script && google.script.run) {
-                google.script.run
-                    .withSuccessHandler(function(response) {
-                        if (response && response.status === "SUCCESS") {
-                            renderFinalTicket(response, name, company, job, submitBtn);
-                        } else {
-                            resetSubmitButton(submitBtn, response.message);
-                        }
-                    })
-                    .withFailureHandler(function(error) {
-                        resetSubmitButton(submitBtn, "خطأ سيرفر: " + error.toString());
-                    })
-                    .processRegistration(initialData);
-            } else {
-                // 🚀 [منظومة الفيتش السحابي]: التخاطب التلقائي من GitHub إلى قاعدة بيانات جوجل شيت مباشرة
-                const urlParams = `?NAME=${encodeURIComponent(name)}&COMPANY=${encodeURIComponent(company)}&JOB=${encodeURIComponent(job)}&EMAIL=${encodeURIComponent(email)}&PHONE=${encodeURIComponent(phone)}`;
-                
-                fetch(GOOGLE_SCRIPT_API_URL + urlParams)
-                    .then(res => res.json())
-                    .then(response => {
-                        if (response && response.status === "SUCCESS") {
-                            renderFinalTicket(response, name, company, job, submitBtn);
-                        } else {
-                            resetSubmitButton(submitBtn, response.message);
-                        }
-                    })
-                    .catch(error => {
-                        resetSubmitButton(submitBtn, "حدثت عقبة أثناء الاتصال بقاعدة البيانات السحابية.");
-                    });
-            }
+            // تمرير البيانات المباشرة عبر الـ Query Parameters لضمان قراءتها بداخل دالة doGet بنجاح
+            const queryParams = `?NAME=${encodeURIComponent(name)}&COMPANY=${encodeURIComponent(company)}&JOB=${encodeURIComponent(job)}&EMAIL=${encodeURIComponent(email)}&PHONE=${encodeURIComponent(phone)}`;
+            
+            fetch(GOOGLE_SCRIPT_API_URL + queryParams)
+                .then(res => res.json())
+                .then(response => {
+                    if (response && response.status === "SUCCESS") {
+                        renderFinalTicket(response, name, company, job, submitBtn);
+                    } else {
+                        resetSubmitButton(submitBtn, response.message);
+                    }
+                })
+                .catch(error => {
+                    resetSubmitButton(submitBtn, "حدثت عقبة أثناء الاتصال بقاعدة البيانات السحابية.");
+                });
         }
 
-        // دالة حقن البيانات وتوليد التذكرة والتقاط صورة البادج ورفعها
+        // حقن البيانات وتوليد التذكرة والتقاط صورة كرت البادج لرفعها النهائي للسيرفر لتحديث خانة الـ Photo
         function renderFinalTicket(response, name, company, job, submitBtn) {
             document.getElementById('ticket-lbl-name').innerText = name;
             document.getElementById('ticket-lbl-company').innerText = company;
@@ -525,29 +438,22 @@
             document.getElementById('input-ticket-form').classList.add('hidden');
 
             qrImg.onload = function() {
-                // إعطاء فرصة ربع ثانية للمتصفح ليستقر ثم تصوير الكرت بالكامل ورفعه لخانة PHOTO
                 setTimeout(function() {
                     const element = document.getElementById('ticket-to-print');
                     html2canvas(element, { useCORS: true, allowTaint: true, scale: 1.2, backgroundColor: "#000000" }).then(canvas => {
                         const badgeBase64 = canvas.toDataURL("image/png");
                         
-                        // رفع صورة الكرت كامل مكمل عبر دالة السيرفر الخلفية المستقلة
-                        if (typeof google !== 'undefined' && google.script && google.script.run) {
-                            google.script.run.withSuccessHandler(function() {
-                                finalizeRegistrationProcess(submitBtn);
-                            }).uploadBadgeImage(response.rowIndex, badgeBase64);
-                        } else {
-                            // الحفظ عابر النطاقات من GitHub عبر الـ fetch
-                            const uploadParams = `?action=upload&rowIndex=${response.rowIndex}&photo=${encodeURIComponent(badgeBase64)}`;
-                            fetch(GOOGLE_SCRIPT_API_URL + uploadParams)
-                                .then(() => finalizeRegistrationProcess(submitBtn))
-                                .catch(() => finalizeRegistrationProcess(submitBtn));
-                        }
+                        // تحديث السطر الفعلي المضاف بالصورة التفاعلية عبر معامل التحميل والـ rowIndex
+                        const uploadParams = `?action=upload&rowIndex=${response.rowIndex}&photo=${encodeURIComponent(badgeBase64)}`;
+                        fetch(GOOGLE_SCRIPT_API_URL + uploadParams)
+                            .then(() => finalizeRegistrationProcess(submitBtn))
+                            .catch(() => finalizeRegistrationProcess(submitBtn));
                     }).catch(() => finalizeRegistrationProcess(submitBtn));
                 }, 250);
             };
         }
 
+        // إنهاء معالجة وتأكيد الحجز بنجاح كامل للمستخدم وتأكيد عداد المقاعد المحدثة
         function finalizeRegistrationProcess(submitBtn) {
             submitBtn.disabled = false;
             submitBtn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
@@ -557,12 +463,14 @@
             document.getElementById('ticket-result-panel').scrollIntoView({ behavior: 'smooth' });
         }
 
+        // إعادة تشغيل حالة الزر عند حدوث خطأ أو رفض سحابي
         function resetSubmitButton(btn, errorMsg) {
             btn.disabled = false;
             btn.innerHTML = '<span>تأكيد الحجز وإصدار البادج الذكي</span> <i class="fas fa-ticket-alt text-[10px]"></i>';
             showToast(errorMsg || "عذراً، حدث خطأ غير متوقع.", "error");
         }
 
+        // دالة تنزيل وحفظ كرت التذكرة والبادج محلياً كملف صورة عالية الدقة
         function downloadTicketAsImage() {
             const element = document.getElementById('ticket-to-print');
             const ticketNumber = document.getElementById('ticket-lbl-id').innerText;
@@ -577,6 +485,7 @@
             }).catch(err => { showToast("حدث خطأ في تحميل الصورة.", "error"); });
         }
 
+        // تصفير النموذج والعودة لشاشة الاستمارة الرئيسية
         function resetTicketForm() {
             document.getElementById('input-ticket-form').classList.remove('hidden');
             document.getElementById('ticket-result-panel').classList.add('hidden');
@@ -585,12 +494,13 @@
             document.getElementById('photo-preview-img').src = "";
             document.getElementById('photo-preview-img').classList.add('hidden');
             document.getElementById('photo-preview-placeholder').classList.remove('hidden');
-            document.getElementById('upload-status-text').innerText = "اضغط لرفع وصنع صورتك التفاعلية";
+            document.getElementById('upload-status-text').innerText = "اضغط لرفع صورتك الشخصية";
             document.getElementById('upload-icon').className = "fas fa-camera text-slate-400 text-sm";
             document.getElementById('reg-photo').value = "";
-            document.getElementById('main-body').scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         
+        // مشغل لوحة التنبيهات المنبثقة السريعة
         function showToast(message, type) {
             const toast = document.getElementById('toast');
             const toastMsg = document.getElementById('toast-msg');
